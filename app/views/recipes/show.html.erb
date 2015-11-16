@@ -1,0 +1,18 @@
+<h2><%= @recipe.name %></h2>
+<p><%= link_to "Edit", edit_recipe_path(@recipe) %></p>
+
+<div class="recipe-card">
+  <%= image_tag @recipe.photo, class: "recipe-photos" %>
+
+  <h3>Ingredients:</h3>
+  <div class="recipe-ingredients">
+    List of ingredients
+  </div>
+
+  <h3>Directions:</h3>
+  <div class="recipe-steps">
+    <%= @recipe.steps %>
+  </div>
+
+  <p>(<em>Recipe and photo courtesy of <%= link_to "Serious Eats", @recipe.url %></em>)</p>
+</div>

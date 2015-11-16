@@ -1,0 +1,7 @@
+<h2>Edit <%= @recipe.name %></h2>
+
+<div class="recipe-form">
+  <%= render 'form' %>
+
+  <%= link_to "Delete", recipe_path(@recipe), method: :delete, class: "delete" %>
+</div>

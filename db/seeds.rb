@@ -22,8 +22,9 @@ recipes = Recipe.create([
 
   {name: "Gravy",
    description: "Use the drippings from the turkey (or a stock/broth of your choice) to make a gravy that will tie the entire meal together",
-   photo: "",
-   url: "" },
+   photo: "http://www.seriouseats.com/recipes/assets_c/2015/10/20150923-Thanksgiving-spread-vicky-wasik-018-thumb-1500xauto-427109.jpg",
+   url: "http://www.seriouseats.com/recipes/2013/11/basic-turkey-gravy-thanksgiving-recipe.html",
+   steps: "1. Melt butter over medium high heat in medium saucepan. \r\n2. Whisk in flour and cook, stirring frequently, until golden blonde, about 2 minutes. \r\n3. Gradually whisk in turkey drippings or stock in a steady stream. \r\n4. Bring to a boil, reduce to a simmer, and cook until reduced to 3 cups, 10 to 15 minutes. \r\n5.Remove from heat and season with salt and pepper to taste. \r\nServe immediately or store in airtight container in refrigerator for up to a week, reheating over medium-low heat before serving."},
 
   {name: "Pumpkin Pie",
    description: "It's not Thanksgiving without dessert, and this autumnal classic will have everyone forgetting they were full",

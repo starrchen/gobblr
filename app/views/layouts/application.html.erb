@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TurkeyWurkey</title>
+  <title>Turkey Wurkey</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+
+  <header>
+    <h1><%= link_to "Turkey Wurkey", "/" %></h1>
+  </header>
+
+  <nav>
+    <%= link_to "Recipes", recipes_path %> |
+    <%= link_to "Ingredients", ingredients_path %> |
+    <% if current_user %>
+      <%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to 'Signup', new_user_registration_path %> |
+      <%= link_to 'Login', new_user_session_path %>
+    <% end %>
+  </nav>
 
 <%= yield %>
 
