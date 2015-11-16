@@ -1,8 +1,8 @@
-# Turkey Wurkey
+# Gobblr
 
-~~(Very lame working title)~~
+~~Formerly known as Turkey Wurkey~~
 
-*Turkey Wurkey* helps reduce Thanksgiving meal-planning anxiety by allowing the user to:
+*Gobblr* helps reduce Thanksgiving meal-planning anxiety by allowing the user to:
 * Look at and choose tried-and-tested Thanksgiving-day recipes (c/o [SeriousEats] (http://www.seriouseats.com/thanksgiving) )
 * Quickly identify all ingredients that are needed for selected recipes
 
