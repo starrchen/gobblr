@@ -17,3 +17,6 @@
 
 # Ignore the rails README
 /README.rdoc
+
+# Ignore helpers
+/app/helpers
