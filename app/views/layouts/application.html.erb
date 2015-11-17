@@ -5,13 +5,17 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
 
+  <%= link_to "/", class: "header" do %>
   <header>
-    <h1><%= link_to "Gobblr", "/" %></h1>
+    <h1>Gobblr</h1>
   </header>
+  <% end %>
 
   <nav>
     <%= link_to "Recipes", recipes_path %> |
@@ -24,7 +28,7 @@
     <% end %>
   </nav>
 
-<%= yield %>
 
+<%= yield %>
 </body>
 </html>
