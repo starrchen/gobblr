@@ -19,6 +19,7 @@ class IngredientsController < ApplicationController
   #show
   def show
     @ingredient = Ingredient.find(params[:id])
+    @amount = Amount.where(ingredient_id: params[:id])
   end
 
   # edit
