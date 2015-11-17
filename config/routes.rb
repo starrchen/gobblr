@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   end
 
+  get '/favorites', to: 'favorites#index'
   resources :recipes do
     member do
       post 'add_favorite'

@@ -1,0 +1,11 @@
+<h2><strong>Starred Recipes</strong></h2>
+
+<div class="favorites-index">
+
+  <ul>
+    <% @favorites.each do |favorite| %>
+    <li>  <%= link_to favorite.recipe.name, recipe_path(favorite.recipe) %> </li>
+    <% end %>
+  </ul>
+
+</div>
