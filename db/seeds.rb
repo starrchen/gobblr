@@ -36,37 +36,134 @@ recipes = Recipe.create([
   ])
 
 ingredients = Ingredient.create([
-  {name: "flour"}, #1
-  {name: "butter"}, #2
-  {name: "salt"}, #3
-  {name: "pepper"}, #4
-  {name: "turkey"}, #5
-  {name: "potatoes"}, #6
-  {name: "pumpkin puree"}, #7
-  {name: "sugar"}, #8
-  {name: "eggs"}, #9
-  {name: "turkey drippings/stock"} #10
+  {name: "Flour"}, #1
+  {name: "Butter"}, #2
+  {name: "Salt"}, #3
+  {name: "Pepper"}, #4
+  {name: "Turkey"}, #5
+  {name: "Potatoes"}, #6
+  {name: "Pumpkin puree"}, #7
+  {name: "Sugar"}, #8
+  {name: "Eggs"}, #9
+  {name: "Turkey drippings/stock"}, #10
+  {name: "Milk"}, #11
+  {name: "Water"}, #12
+  {name: "Ground cinnamon"}, #13
+  {name: "Ground ginger"}, #14
+  {name: "Nutmeg"}, #15
+  {name: "Cream cheese"},
   ])
 
 amounts = Amount.create([
+  #turkey ingredients
+  {recipe_id: 1,
+  ingredient_id: 5,
+  quantity: "one 10-12 lb bird, neck and giblets reserved"},
 
+  {recipe_id: 1,
+  ingredient_id: 3,
+  quantity: "generous, for seasoning"},
+
+  {recipe_id: 1,
+  ingredient_id: 4,
+  quantity: "generous, for seasoning"},
+
+  #mashed potatoes ingredients
+  {recipe_id: 2,
+  ingredient_id: 6,
+  quantity: "4 lbs"},
+
+  {recipe_id: 2,
+  ingredient_id: 11,
+  quantity: "2 cups, preferably whole"},
+
+  {recipe_id: 2,
+  ingredient_id: 2,
+  quantity: "12 tbsps, room temperature"},
+
+  {recipe_id: 2,
+  ingredient_id: 3,
+  quantity: "to taste"},
+
+  {recipe_id: 2,
+  ingredient_id: 4,
+  quantity: "to taste"},
+
+  #gravy ingredients
   {ingredient_id: 1,
-   recipe_id: 3,
-   quantity: "1/4 cup"}, # may need to convert quantity data type to floats to account for 1/2, 1/3, 1/4, etc.,
+  recipe_id: 3,
+  quantity: "1/4 cup"},
 
   {ingredient_id: 2,
-   recipe_id: 3,
-   quantity: "1/4 cup"},
+  recipe_id: 3,
+  quantity: "1/4 cup"},
 
   {ingredient_id: 10,
-   recipe_id: 3,
-   quantity: "4 cups"},
+  recipe_id: 3,
+  quantity: "4 cups"},
 
   {ingredient_id: 3,
-   recipe_id: 3,
-   quantity: "to taste"},
+  recipe_id: 3,
+  quantity: "to taste"},
 
   {ingredient_id: 4,
-   recipe_id: 3,
-   quantity: "to taste"}
+  recipe_id: 3,
+  quantity: "to taste"},
+
+  #pumpkin pie ingredients
+  {ingredient_id: 1,
+  recipe_id: 4,
+  quantity: "2 1/2 cups"},
+
+  {ingredient_id: 8,
+  recipe_id: 4,
+  quantity: "2 tbsps for pie crust"},
+
+  {ingredient_id: 8,
+  recipe_id: 4,
+  quantity: "6 oz for filling"},
+
+  {ingredient_id: 3,
+  recipe_id: 4,
+  quantity: "1 tsp"},
+
+  {ingredient_id: 2,
+  recipe_id: 4,
+  quantity: "20 tbsps for pie crust"},
+
+  {ingredient_id: 2,
+  recipe_id: 4,
+  quantity: "4 tbsps, melted and cooled, for filling"},
+
+  {ingredient_id: 12,
+  recipe_id: 4,
+  quantity: "6 tbsps, cold"}, #end pie crust ingredients
+
+  {ingredient_id: 3,
+  recipe_id: 4,
+  quantity: "1/2 tsp"},
+
+  {ingredient_id: 13,
+  recipe_id: 4,
+  quantity: "1 tsp"},
+
+  {ingredient_id: 14 ,
+  recipe_id: 4,
+  quantity: "1 tsp"},
+
+  {ingredient_id: 15,
+  recipe_id: 4,
+  quantity: "1/2 tsp, use freshly grated if available"},
+
+  {ingredient_id: 16,
+  recipe_id: 4,
+  quantity: "8 oz, room temperature"},
+
+  {ingredient_id: 7,
+  recipe_id: 4,
+  quantity: "15 oz"},
+
+  {ingredient_id: 9,
+  recipe_id: 4,
+  quantity: "3, large"},
   ])
