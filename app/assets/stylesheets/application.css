@@ -15,7 +15,7 @@
  */
 
 @import url(https://fonts.googleapis.com/css?family=Lobster);
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
 
  body{
    background-image: url("knitting250px.png");
@@ -75,9 +75,11 @@
 h2{
   text-align: center;
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 22px;
   text-transform: uppercase;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .recipe-index{
@@ -89,11 +91,26 @@ h2{
   overflow: auto;
 }
 
+.edit-recipe{
+  border: solid 1px darkred;
+  width: 40px;
+  height: 15px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding-top: 2px;
+  text-transform: lowercase;
+}
+
 .recipe-photos{
   width: 500px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.recipe-ingredients{
 }
 
 footer{
