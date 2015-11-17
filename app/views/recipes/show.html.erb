@@ -1,4 +1,11 @@
-<h2><%= @recipe.name %></h2>
+<h2>
+  <%= @recipe.name %>
+  <% if @recipe.favorites.length > 0 %>
+    <%= link_to "<i class='fa fa-star'></i>".html_safe, remove_favorite_recipe_path(@recipe), method: :delete, class: "fav" %>
+  <% else %>
+    <%= link_to "<i class='fa fa-star-o'></i>".html_safe, add_favorite_recipe_path(@recipe), method: :post, class: "no-fav" %>
+  <% end %>
+</h2>
 <p class="edit-recipe"><%= link_to "Edit", edit_recipe_path(@recipe) %></p>
 
 <div class="recipe-card">

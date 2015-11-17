@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   end
 
   resources :recipes do
-    
+    member do
+      post 'add_favorite'
+      delete 'remove_favorite'
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
