@@ -1,6 +1,9 @@
-Recipes that use <%= @ingredient.name.downcase %>:
-<ul>
-  <% @amount.each do |amount| %>
-  <li><%= link_to amount.recipe.name, recipe_path(amount.recipe) %></li>
-  <% end %>
-</ul>
+<div class="main">
+  Recipes that use <%= @ingredient.name.downcase %>:
+  <ul>
+    <% @amount.each do |amount| %>
+    <li><%= link_to amount.recipe.name, recipe_path(amount.recipe) %></li>
+    <% end %>
+  </ul>
+
+</div>
