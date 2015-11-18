@@ -6,7 +6,10 @@
     <%= link_to "<i class='fa fa-star-o'></i>".html_safe, add_favorite_recipe_path(@recipe), method: :post, class: "no-fav" %>
   <% end %>
 </h2>
-<p class="edit-recipe"><%= link_to "Edit", edit_recipe_path(@recipe) %></p>
+<div id="edit-recipe">
+  <span class="edit-recipe"><%= link_to "Add Recipe Ingredients", new_recipe_amount_path(@recipe) %></span>
+  <span class="edit-recipe"><%= link_to "Edit", edit_recipe_path(@recipe) %></span>
+</div>
 
 <div class="main">
   <%= image_tag @recipe.photo, class: "recipe-photos" %>

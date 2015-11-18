@@ -7,13 +7,11 @@ class AmountsController < ApplicationController
 
   def new
     @recipe = Recipe.find(params[:recipe_id])
-    @ingredients = Ingredient.all
     @amount = Amount.new
   end
 
   def create
     @recipe = Recipe.find(params[:recipe_id])
-    @ingredients = Ingredient.all
     @amount = Amount.create(amount_params)
     redirect_to recipe_path(@recipe)
   end
