@@ -1,0 +1,13 @@
+<%= form_for [@recipe, @amount] do |f| %>
+
+  <%= f.label :ingredient_id, "Ingredient" %>
+  <%= f.collection_select  :ingredient_id, Ingredient.all, :id, :name, include_blank: true %>
+
+  <p>Don't see the ingredient you need? <%= link_to "Add it here.", new_ingredient_path %></p>
+
+  <%= f.label :quantity %>
+  <%= f.text_field :quantity %>
+
+  <%= f.submit%>
+
+<% end %>

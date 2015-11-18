@@ -13,6 +13,7 @@ class RecipesController < ApplicationController
   # create
   def create
     @recipe = Recipe.create!(recipe_params)
+    @amount = Amount.where(recipe_id: params[:id])
     redirect_to recipe_path(@recipe)
   end
 
