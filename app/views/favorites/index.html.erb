@@ -8,4 +8,13 @@
     <% end %>
   </ul>
 
+  <h2>All Ingredients Needed</h2>
+  <ul>
+    <% @favorites.each do |favorite| %>
+      <% favorite.recipe.ingredients.each do |ingredient| %>
+      <li><%= ingredient.name %></li>
+      <% end %>
+    <% end %>
+  </ul>
+
 </div>
