@@ -76,10 +76,12 @@
 
  .notice{
    text-align: center;
+   color: darkblue;
  }
 
  .alert{
    text-align: center;
+   color: darkred;
  }
 
  a{
@@ -163,7 +165,7 @@ h2{
 
 a.fav{
   text-decoration: none;
-  color: yellow;
+  color: gold;
   font-size: 15px;
 }
 

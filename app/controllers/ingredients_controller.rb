@@ -7,11 +7,13 @@ class IngredientsController < ApplicationController
 
   # new
   def new
+    authenticate_user!
     @ingredient = Ingredient.new
   end
 
   # create
   def create
+    authenticate_user!
     @ingredient = Ingredient.create!(ingredient_params)
     redirect_to ingredient_path(@ingredient)
   end
@@ -24,11 +26,13 @@ class IngredientsController < ApplicationController
 
   # edit
   def edit
+    authenticate_user!
     @ingredient = Ingredient.find(params[:id])
   end
 
   # update
   def update
+    authenticate_user!
     @ingredient = Ingredient.find(params[:id])
     @ingredient.update(ingredient_params)
     redirect_to ingredient_path(@ingredient)
@@ -36,6 +40,7 @@ class IngredientsController < ApplicationController
 
   # destroy
   def destroy
+    authenticate_user!
     @ingredient = Ingredient.find(params[:id])
     @ingredient.destroy
     redirect_to ingredients_path

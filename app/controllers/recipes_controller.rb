@@ -7,11 +7,13 @@ class RecipesController < ApplicationController
 
   # new
   def new
+    authenticate_user!
     @recipe = Recipe.new
   end
 
   # create
   def create
+    authenticate_user!
     @recipe = current_user.recipes.create!(recipe_params)
     @amount = Amount.where(recipe_id: params[:id])
     redirect_to recipe_path(@recipe)
@@ -25,11 +27,13 @@ class RecipesController < ApplicationController
 
   # edit
   def edit
+    authenticate_user!
     @recipe = Recipe.find(params[:id])
   end
 
   # update
   def update
+    authenticate_user!
     @recipe = Recipe.find(params[:id])
     @recipe.update(recipe_params)
     redirect_to recipe_path(@recipe)
@@ -37,6 +41,7 @@ class RecipesController < ApplicationController
 
   # destroy
   def destroy
+    authenticate_user!
     @recipe = Recipe.find(params[:id])
     @recipe.amounts.destroy_all
     @recipe.favorites.destroy_all

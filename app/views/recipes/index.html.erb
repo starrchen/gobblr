@@ -1,6 +1,6 @@
-<div class="main">
 
-  <h2><strong>Recipes</strong> <%= link_to "(+)", new_recipe_path %></h2>
+
+  <h2><strong>Recipes</strong> <% if current_user %><%= link_to "(+)", new_recipe_path %><% end %></h2>
 
   <div class="recipe-index">
     <% @recipes.each do |recipe| %>

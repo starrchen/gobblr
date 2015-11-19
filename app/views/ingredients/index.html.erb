@@ -1,6 +1,6 @@
-<div class="main">
 
-  <h2><strong>Ingredients</strong> <%= link_to "(+)", new_ingredient_path %></h2>
+
+  <h2><strong>Ingredients</strong> <% if current_user %><%= link_to "(+)", new_ingredient_path %><% end %></h2>
 
   <div class="ingredient-index">
     <% @ingredients.each do |ingredient| %>
