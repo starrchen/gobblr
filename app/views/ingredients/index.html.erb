@@ -1,11 +1,13 @@
-<h2><strong>Ingredients</strong> <%= link_to "(+)", new_ingredient_path %></h2>
-
 <div class="main">
 
-  <% @ingredients.each do |ingredient| %>
-  <p class="ingredient-name">
-    <%= link_to ingredient.name, ingredient %>
-  </p>
-  <% end %>
+  <h2><strong>Ingredients</strong> <%= link_to "(+)", new_ingredient_path %></h2>
+
+  <div class="ingredient-index">
+    <% @ingredients.each do |ingredient| %>
+    <p class="ingredient-name">
+      <%= link_to ingredient.name, ingredient %>
+    </p>
+    <% end %>
+  </div>
 
 </div>

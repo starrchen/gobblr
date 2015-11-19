@@ -43,12 +43,14 @@ class RecipesController < ApplicationController
   end
 
   def add_favorite
+    authenticate_user!
     @recipe = Recipe.find(params[:id])
     @recipe.favorites.create(user: current_user)
     redirect_to recipe_path(@recipe)
   end
 
   def remove_favorite
+    authenticate_user!
     @recipe = Recipe.find(params[:id])
     @recipe.favorites.destroy_all
     redirect_to recipe_path(@recipe)

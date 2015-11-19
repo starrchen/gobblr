@@ -1,15 +1,16 @@
-<h2><strong>Recipes</strong> <%= link_to "(+)", new_recipe_path %></h2>
-
 <div class="main">
 
-  <% @recipes.each do |recipe| %>
-  <h3 class="recipe-name">
-    <%= link_to recipe.name, recipe %>
-  </h3>
-  <p class="recipe-description">
-    <%= recipe.description %>
-  </p>
-  <% end %>
+  <h2><strong>Recipes</strong> <%= link_to "(+)", new_recipe_path %></h2>
 
+  <div class="recipe-index">
+    <% @recipes.each do |recipe| %>
+    <h3 class="recipe-name">
+      <%= link_to recipe.name, recipe %>
+    </h3>
+    <p class="recipe-description">
+      <%= recipe.description %>
+    </p>
+    <% end %>
+  </div>
 
 </div>

@@ -1,17 +1,17 @@
-<h2>
-  <%= @recipe.name %>
-  <% if @recipe.favorites.length > 0 %>
-    <%= link_to "<i class='fa fa-star'></i>".html_safe, remove_favorite_recipe_path(@recipe), method: :delete, class: "fav" %>
-  <% else %>
-    <%= link_to "<i class='fa fa-star-o'></i>".html_safe, add_favorite_recipe_path(@recipe), method: :post, class: "no-fav" %>
-  <% end %>
-</h2>
-<div id="edit-recipe">
-  <span class="edit-recipe"><%= link_to "Add Recipe Ingredients", new_recipe_amount_path(@recipe) %></span>
-  <span class="edit-recipe"><%= link_to "Edit", edit_recipe_path(@recipe) %></span>
-</div>
-
 <div class="main">
+  <h2>
+    <%= @recipe.name %>
+    <% if @recipe.favorites.length > 0 %>
+      <%= link_to "<i class='fa fa-star'></i>".html_safe, remove_favorite_recipe_path(@recipe), method: :delete, class: "fav" %>
+    <% else %>
+      <%= link_to "<i class='fa fa-star-o'></i>".html_safe, add_favorite_recipe_path(@recipe), method: :post, class: "no-fav" %>
+    <% end %>
+  </h2>
+  <div id="edit-recipe">
+    <span class="edit-recipe"><%= link_to "Add Ingredients", new_recipe_amount_path(@recipe) %></span>
+    <span class="edit-recipe"><%= link_to "Edit", edit_recipe_path(@recipe) %></span>
+  </div>
+
   <%= image_tag @recipe.photo, class: "recipe-photos" %>
 
   <h3>Ingredients:</h3>

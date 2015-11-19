@@ -28,7 +28,7 @@
    width: 200px;
    height: 70px;
    margin: 0 auto;
-   margin-top: 10px;
+   margin-top: 40px;
    margin-bottom: 10px;
    opacity: 0.7;
  }
@@ -49,20 +49,35 @@
  }
 
  nav{
-   width: 550px;
+   position:fixed;
+   top: 0;
+   width: 100%;
    height: 20px;
    margin: 0 auto;
-   margin-top: 10px;
    padding-top: 3px;
-   border-top: solid white 2px;
    border-bottom: solid white 2px;
    display: block;
    text-align: center;
    vertical-align: middle;
+   background-color: rgba(1, 1, 1, 0.4);
+   color: white;
    font-family: 'Lato', sans-serif;
    font-size: 14px;
    font-weight: 300;
    text-transform: uppercase;
+ }
+
+ nav a{
+   color: white;
+ }
+
+
+ .notice{
+   text-align: center;
+ }
+
+ .alert{
+   text-align: center;
  }
 
  a{
@@ -80,12 +95,12 @@ h2{
   font-size: 22px;
   text-transform: uppercase;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .main{
   width: 530px;
-  height: 470px;
+  height: 500px;
   border: solid 1px darkred;
   margin: 0 auto;
   margin-top: 10px;
@@ -93,20 +108,44 @@ h2{
   overflow: auto;
 }
 
+.recipe-index{
+  overflow: auto;
+  height: 430px;
+  width: 530px;
+}
+
+.ingredient-index{
+  overflow: auto;
+  height: 430px;
+  width: 530px;
+  line-height: 5px;
+  text-align: center;
+}
+
+#edit-recipe{
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  width: 500px;
+  text-align: center;
+}
+
 .edit-recipe{
   border: solid 1px darkred;
-  width: 40px;
+  width: 200px;
   height: 15px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  padding-top: 2px;
-  text-transform: lowercase;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: lighter;
 }
 
 .recipe-photos{
-  width: 500px;
+  width: 400px;
   display: block;
   border: solid 3px white;
   padding: 1px;
@@ -134,10 +173,11 @@ footer{
   color: black;
   font-size: 10px;
   line-height: 1px;
-  position: absolute;
-  bottom:0px;
-  left:0px;
-  right:0px;
+  position: fixed;
+  margin: 0 auto;
+  bottom:0;
+  left:0;
+  right:0;
   height:30px;
   margin-bottom:0px;
   text-align: center;
