@@ -11,6 +11,7 @@
     <div id="edit-recipe">
       <span class="edit-recipe"><%= link_to "Add Ingredients", new_recipe_amount_path(@recipe) %></span>
       <span class="edit-recipe"><%= link_to "Edit", edit_recipe_path(@recipe) %></span>
+      <span class="edit-recipe"><%= link_to "Delete", recipe_path(@recipe), method: :delete, class: "delete" %></span>
     </div>
   <% else %>
     <p class="recipe-author">By <%= @recipe.user.email %></p>

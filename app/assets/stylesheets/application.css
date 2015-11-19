@@ -132,6 +132,12 @@ h2{
   text-align: center;
 }
 
+.recipe-author{
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
 .edit-recipe{
   border: solid 1px darkred;
   width: 200px;
