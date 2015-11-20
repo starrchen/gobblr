@@ -39,6 +39,8 @@ In the end, I decided the best way to join these two tables was through an **amo
 
 From there, it was about deciding what kind of information was most useful to the user (ingredients, quantities, and directions on the recipe pages; recipes that used a given ingredient; all ingredients needed for saved recipes) and finagling the model associations to access that information from different areas in the app.
 
+User stories can be found [here](https://github.com/starrchen/gobblr/blob/master/user_stories.md).
+
 ## Future Features
 
 If I had more time, here are some features I would add:
