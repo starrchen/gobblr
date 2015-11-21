@@ -45,7 +45,7 @@ From there, it was about deciding what kind of information was most useful to th
 
 User stories can be found [here](https://github.com/starrchen/gobblr/blob/master/user_stories.md).
 
-## Future Features
+## Future Features*
 
 If I had more time, here are some features I would add:
 
@@ -53,3 +53,4 @@ If I had more time, here are some features I would add:
 * **Edit ingredient quantities**: Ran out of time to do this but would have continued building out the `amount` views to include editing and deleting ingredient quantities.
 * **"My Recipes"**: Ran out of time to do this but would have an option next to "Starred" where users could access all recipes they created on Gobblr.
 * **Flash alerts**: Ran out of time to do this but would have added flash notifications/alerts to prevent user from creating recipes without names/directions, etc. to improve UX.
+* **Form improvement**: After talking with Tim about [his project](https://github.com/timothytgregg/QuotesApp), I want to try to make my forms more robust by enabling them to (1) Create a new ingredient if it doesn't already exist and (2) Add to multiple tables (recipe and amount) with one form.
