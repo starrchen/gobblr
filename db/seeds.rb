@@ -12,7 +12,8 @@ Ingredient.destroy_all
 admin = User.create!([
   {email: "starr@chen.com",
    password: "heythere",
-   password_confirmation: "heythere"}
+   password_confirmation: "heythere",
+   admin: true}
   ])
 
 recipes = Recipe.create([

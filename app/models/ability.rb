@@ -5,7 +5,11 @@ class Ability
     can [:update, :destroy], Recipe do |recipe|
       recipe.user == user
     end
-    
+
+    if user.admin
+      can :manage, Recipe
+    end
+
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
