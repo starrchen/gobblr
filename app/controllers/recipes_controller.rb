@@ -29,12 +29,14 @@ class RecipesController < ApplicationController
   def edit
     authenticate_user!
     @recipe = Recipe.find(params[:id])
+    authorize! :update, @recipe
   end
 
   # update
   def update
     authenticate_user!
     @recipe = Recipe.find(params[:id])
+    authorize! :update, @recipe
     @recipe.update(recipe_params)
     redirect_to recipe_path(@recipe)
   end
@@ -43,6 +45,7 @@ class RecipesController < ApplicationController
   def destroy
     authenticate_user!
     @recipe = Recipe.find(params[:id])
+    authorize! :destroy, @recipe
     @recipe.amounts.destroy_all
     @recipe.favorites.destroy_all
     @recipe.destroy
