@@ -18,7 +18,7 @@
 
 **Meets Expectations**. It was very easy to read through your code. Only thing I can suggest here is to be more consistent and use code comments here and there, but I had no problem parsing through your code. Keep it up, and make sure to click the link below for my inline code comments.
 
-[inline code comments here](https://github.com/starrchen/gobblr/pull/2/files)
+[Inline code comments.](https://github.com/starrchen/gobblr/pull/2/files)
 
 ## Problem Solving
 
