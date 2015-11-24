@@ -49,6 +49,7 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
+  # AM: Thought exercise - what would your application look like if you delegated all of your favoriting functionality to your FavoritesController?
   def add_favorite
     authenticate_user!
     @recipe = Recipe.find(params[:id])
