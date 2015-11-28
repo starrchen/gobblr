@@ -39,5 +39,10 @@ class AmountsController < ApplicationController
   def amount_params
     params.require(:amount).permit(:recipe_id, :ingredient_id, :quantity)
   end
-
+# I think your controllers would benefit from using code like the following to make it more dry:
+# private
+#   def set_amount
+#     @amount = Amount.find(params[:id])
+#   end
+# and then at the top of the page you would include before_action :set_amount, only: [:show, :edit, :update, :destroy]
 end
