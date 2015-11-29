@@ -3,9 +3,12 @@
   <%= f.label :recipe_id, "Recipe" %>
   <%= f.collection_select :recipe_id, Recipe.all, :id, :name %>
 
+  <!-- AM: Glad to see you figured this part out! -->
   <%= f.label :ingredient_id, "Ingredient" %>
   <%= f.collection_select :ingredient_id, Ingredient.all, :id, :name, include_blank: true %>
 
+  <!-- AM: I like this. Good addition to UX. -->
+  <!-- AM: An advanced thought, but how would you go about redirecting the user to this page after adding a new ingredient? -->
   <p>Don't see the ingredient you need? <%= link_to "Add it here.", new_ingredient_path %></p>
 
   <%= f.label :quantity %>

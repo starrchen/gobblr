@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20151119182942) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  # AM: Very creative use of a many-to-many relationship.
   create_table "amounts", force: :cascade do |t|
     t.integer  "ingredient_id"
     t.integer  "recipe_id"
@@ -50,6 +51,8 @@ ActiveRecord::Schema.define(version: 20151119182942) do
     t.string   "photo"
     t.string   "url"
     t.string   "description"
+    # AM: We talked about this during our 1:1's, but worth considering what the application would look like with Step as its own model.
+    # AM: Might be helpful since you never know how many steps a given recipe might have.
     t.string   "steps"
     t.integer  "user_id"
   end

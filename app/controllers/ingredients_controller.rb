@@ -21,6 +21,8 @@ class IngredientsController < ApplicationController
   #show
   def show
     @ingredient = Ingredient.find(params[:id])
+    # AM: Do you use `where` because there might be multiple amounts for a given ingredient? If so, `@amounts` would be a more apt name.
+    # AM: Otherwise, would use `find(_by)` instead of `where` so you know exactly what to expect.
     @amount = Amount.where(ingredient_id: params[:id])
   end
 

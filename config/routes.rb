@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'recipes#index'
+  # AM: Do you need this line if you later use `resources :recipes`?
   get '/recipes', to: 'recipes#index'
-
+  # AM: No need for `do` and `end` if you're just creating all the RESTful routes for `ingredients`.
   resources :ingredients do
 
   end
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
       delete 'remove_favorite'
     end
     resources :amounts do
-      
+
     end
   end
 
